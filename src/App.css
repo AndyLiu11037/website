@@ -69,3 +69,11 @@ div.navbar-nav{
   font-family: 'Montserrat', sans-serif;
   font-size: 4em;
 }
+
+/*Background css*/
+.test{
+  width: 2rem;
+  height: 2rem;
+  margin: .5rem;
+  background-color: black;
+}
