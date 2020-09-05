@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './Components/NavBar.js';
 import {hot} from "react-hot-loader";
 import 'animate.css';
-import Anime, {anime} from 'react-anime';
+import anime from 'animejs'
 class Home extends React.Component {
 	constructor(props){
 		super(props);
@@ -12,11 +12,23 @@ class Home extends React.Component {
 			value: null,
 		};
 	}
-
+	componentDidMount(){
+		anime({
+			targets: '.test',
+			translateX:'13rem',
+			rotate:180,
+			borderRadius:'8px',
+			loop:true,
+			duration: 4000
+		});
+	}
 	render(){
 		return (
 			<div>
 				<React.Fragment>
+
+					<div> {/*make a div wrapper for fade in the whole page 
+							When using svg line drawing animation, need to add strok="colour"*/}
 					<NavBar/>
 
 					
@@ -28,16 +40,14 @@ class Home extends React.Component {
 						<br></br>
 						<a className="title-2">Dabble in everything</a>
 					</div>
-	
-					<Anime translateX={'13rem'}
-							rotate={anime.rotate=180}
-							borderRadius={'8px'}
-							duration={anime.duration=2000}
-							loop={anime.loop=true}>
-						<div className="test"></div>
-					</Anime>
+					<div className="test"></div>
+					<div className="test"></div>
+					<div className="test"></div>
+					</div>
+
 				</React.Fragment>
 			</div>
+			
 		);
 	}
 
