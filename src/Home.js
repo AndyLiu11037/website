@@ -27,22 +27,19 @@ class Home extends React.Component {
 				
 				<React.Fragment>
 				{ this.state.renderIntro ? <Intro /> : 
-					<div className="intro-fade"> {/*make a div wrapper for fade in the whole page 
+					<div className="intro-fade"> {/*
 							When using svg line drawing animation, need to add strok="colour"*/}
-					<NavBar/>
-					
-					
-					<div className="website-name animate__animated animate__bounce">Andy Liu's Resume</div>
-					<div className="title-text">
-						<a className="title">Andy Liu</a>
-						<br></br>
-						<a className="title-2">Software Developer</a>
-						<br></br>
-						<a className="title-2">Dabble in everything</a>
-					</div>
-					<div className="test"></div>
-					<div className="test"></div>
-					<div className="test"></div>
+						<NavBar/>
+						
+						
+						<div className="website-name animate__animated animate__bounce">Andy Liu's Resume</div>
+						<div className="title-text">
+							<a className="title">Andy Liu</a>
+							<br></br>
+							<a className="title-2">Software Developer</a>
+							<br></br>
+							<a className="title-2">Dabble in everything</a>
+						</div>
 					</div>
 				}
 				</React.Fragment>
