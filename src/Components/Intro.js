@@ -7,13 +7,11 @@ class Intro extends React.Component {
     constructor(props){
 		super(props);
 		this.state = {
-			renderIntro: true,
+			value: true,
 		};
-        this.interval = null;
         
 	}
     componentDidMount(){
-        this.interval = setTimeout(() => this.setState({renderIntro: false}),2500);
         var pathEls = document.querySelectorAll('path');
         for (var i = 0; i < pathEls.length; i++) {
             var pathEl = pathEls[i];
@@ -30,28 +28,6 @@ class Intro extends React.Component {
                 autoplay: true,
                 
             });
-        }
-    }
-    componentDidUpdate(prevProps,prevState){
-        if(this.state.renderIntro !== prevState.renderIntro){
-            
-            var pathEls = document.querySelectorAll('path');
-            console.log("start")
-            // for (var i = 0; i < pathEls.length; i++) {
-            //     var pathEl = pathEls[i];
-            //     var offset = anime.setDashoffset(pathEl);
-            //     pathEl.setAttribute('stroke-dashoffset', offset);
-            //     anime({
-            //         targets: pathEl,
-            //         strokeDashoffset: [offset, 0],
-            //         duration: anime.random(500, 1500),
-            //         delay: anime.random(500, 1000),
-            //         loop: false,
-            //         direction: 'reverse',
-            //         easing: 'easeInOutSine',
-            //         autoplay: true,
-            //     });
-            // }
         }
     }
     render(){

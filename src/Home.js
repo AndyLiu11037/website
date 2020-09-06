@@ -24,9 +24,10 @@ class Home extends React.Component {
 	render(){
 		return (
 			<div>
+				
 				<React.Fragment>
-					{ this.state.renderIntro ? <Intro /> : null }
-					<div> {/*make a div wrapper for fade in the whole page 
+				{ this.state.renderIntro ? <Intro /> : 
+					<div className="intro-fade"> {/*make a div wrapper for fade in the whole page 
 							When using svg line drawing animation, need to add strok="colour"*/}
 					<NavBar/>
 					
@@ -43,7 +44,7 @@ class Home extends React.Component {
 					<div className="test"></div>
 					<div className="test"></div>
 					</div>
-
+				}
 				</React.Fragment>
 			</div>
 			
