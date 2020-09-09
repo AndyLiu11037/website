@@ -1,21 +1,19 @@
 import React, {Component} from 'react'
-import {Link, BrowserRouter as Router} from 'react-router-dom'
+import {Link, BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {hot} from "react-hot-loader";
 
-import './../App.css'
-import './../fonts.css'
+
 class NavBar extends Component{
     render(){
         return(
             <nav className="navbar navbar-expand-lg ">
                 <div className="navbar-nav ml-5">
-                    <Router>
-                        <a className="nav-item nav-link"> <Link to="/home"></Link> Home <span className="sr-only">(current)</span></a>
-                        <a className="nav-item nav-link" href="/about">About</a>
-                        <a className="nav-item nav-link" href="/projects">Past Projects</a>
-                    </Router>
+                    <a className="nav-item nav-link"><Link to="/">Home</Link></a>
+                    <a className="nav-item nav-link"><Link to="/about">About</Link></a>
+                    <a className="nav-item nav-link"><Link to="">Past Projects</Link></a>
                 </div>
             </nav>
         )
     }
 }
-export default NavBar;
+export default hot(module)(NavBar);

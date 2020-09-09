@@ -59,26 +59,25 @@ div.navbar-nav{
 }
 /*Homepage css*/
 .title-text{
-  text-align: center;
+  margin: auto;
+  width: 40em;
 }
 .title{
   font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   font-size: 6em;
+  color: rgb(24, 113, 190);
 }
 .title-2{
   font-family: 'Montserrat', sans-serif;
-  font-size: 4em;
+  font-size: 3em;
+  text-align: left;
 }
-body{
+.body{
   overflow: hidden;
 }
 /*Background css*/
-.test{
-  width: 2rem;
-  height: 2rem;
-  margin: .5rem;
-  background-color: black;
-}
+
 .welcome, .welcome svg {
   position: fixed;
   width: 100%;
