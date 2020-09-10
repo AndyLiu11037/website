@@ -5,7 +5,7 @@ class Home extends React.Component {
 
 	render(){
 		return (
-				<React.Fragment>{/*
+				<div>{/*
 							When using svg line drawing animation, need to add strok="colour"*/}
 
 						
@@ -19,7 +19,7 @@ class Home extends React.Component {
 				<br></br>
 				<p className="title-2">Dabble in everything</p>
 
-				</React.Fragment>
+				</div>
 			
 		);
 	}

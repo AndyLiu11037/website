@@ -7,15 +7,21 @@ class Intro extends React.Component {
     constructor(props){
 		super(props);
 		this.state = {
-			value: true,
+            value: true,
+            complete: 0,
 		};
-        
-	}
+    }
+    componentDidUpdate(){
+        if(this.state.complete == 20){
+            this.props.unmountIntro();
+        }
+    }
     componentDidMount(){
         var pathEls = document.querySelectorAll('path');
         for (var i = 0; i < pathEls.length; i++) {
             var pathEl = pathEls[i];
             var offset = anime.setDashoffset(pathEl);
+            const thisIntro = this;
             pathEl.setAttribute('stroke-dashoffset', offset);
             anime({
                 targets: pathEl,
@@ -26,7 +32,11 @@ class Intro extends React.Component {
                 direction: 'alternate',
                 easing: 'easeInOutSine',
                 autoplay: true,
-                
+                complete: function(){
+                    thisIntro.setState((state) => {
+                        return {complete: state.complete + 1}
+                    });
+                }
             });
         }
     }

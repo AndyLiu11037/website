@@ -17,18 +17,18 @@ class App extends Component {
 		this.state = {
 			renderIntro: true,
 		};
-        this.interval = null;
-	}
-	componentDidMount(){
-		this.interval = setTimeout(() => this.setState({renderIntro: false}),7000);
+        this.unmountIntro = this.unmountIntro.bind(this);
 	}
 	componentWillUnmount() {
 		clearInterval(this.interval);
-	}   
+    }
+    unmountIntro(){
+        this.setState({renderIntro: false});
+    }
     render() {
       return (
-        <React.Fragment>
-        { this.state.renderIntro ? <Intro /> : 
+        <div className="background">
+        { this.state.renderIntro ? <Intro unmountIntro={this.unmountIntro}/> : 
             <div className="intro-fade">
                 <Router>
                     <NavBar/>
@@ -39,7 +39,7 @@ class App extends Component {
                 </Router>
             </div>
         }
-        </React.Fragment>
+        </div>
       );
     }
   }
