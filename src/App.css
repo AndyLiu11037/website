@@ -58,28 +58,60 @@ div.navbar-nav{
   align-self: center;
 }
 /*Homepage css*/
-.title-text{
+div.home-title{
   margin: auto;
   width: 40em;
 }
-.title{
+div.home-title .title{
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 6em;
   color: rgb(24, 113, 190);
 }
-.title-2{
+div.home-title .title-2{
   font-family: 'Montserrat', sans-serif;
   font-size: 3em;
   text-align: left;
 }
 .body{
   overflow: hidden;
+  
+}
+div.interest{
+  margin: auto;
+  width: 40em;
+}
+div.interest .title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4em;
+  text-align: left;
+}
+div.interest .text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  text-align: left;
+}
+
+div.portfolio{
+  margin: auto;
+  width: 40em;
+}
+div.portfolio .title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4em;
+  text-align: left;
+}
+div.portfolio .text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  text-align: left;
 }
 /*Background css*/
 .background {
   min-height: 100vh;
-  background-image: linear-gradient(to bottom,#212121,white);
+  background-color: #212121;
+  color: azure;
+  /*background-image: linear-gradient(to right, #a7bfe8, #6190e8);*/
 }
 .welcome, .welcome svg {
   position: fixed;

@@ -11,13 +11,19 @@ class Home extends React.Component {
 						
 						
 				<div className="website-name animate__animated animate__bounce">Andy Liu's Resume</div>
-				<div className="title-text">
+				<div className="home-title">
 					<p className="title">I'm Andy Liu</p>
 					<p className="title-2">Software Developer</p>
-
 				</div>
 				<br></br>
-				<p className="title-2">Dabble in everything</p>
+				<div className="interest">
+					<p className="title">Interests</p>
+					<ul className="text">
+						<li>Software Development</li>
+						<li>Cyber Security</li>
+						<li>Neural networks kinda</li>
+					</ul>
+				</div>
 
 				</div>
 			
