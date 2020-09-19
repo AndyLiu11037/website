@@ -9,8 +9,7 @@ class NavBar extends Component{
             <nav className="navbar navbar-expand-lg ">
                 <div className="navbar-nav ml-5">
                     <a className="nav-item nav-link"><Link to="/">Home</Link></a>
-                    <a className="nav-item nav-link"><Link to="/about">About</Link></a>
-                    <a className="nav-item nav-link"><Link to="">Past Projects</Link></a>
+                    <a className="nav-item nav-link"><Link to="/portfolio">Past Projects</Link></a>
                 </div>
             </nav>
         )

@@ -42,9 +42,6 @@
   font-size: large;
   padding-right: 54em;
 }
-nav.navbar{
-  justify-content: center;
-}
 a.nav-item{
   font-family: 'Montserrat', sans-serif;;
   
@@ -56,19 +53,31 @@ a.nav-link{
 div.navbar-nav{
   display:inline-block;
   align-self: center;
+  position: relative;
+  left: 40%;
 }
 /*Homepage css*/
-div.home-title{
-  margin: auto;
-  width: 40em;
+div.title-screen {
+  height: 100vh;
+  position: relative;
 }
-div.home-title .title{
+div.title-screen div.home-title{
+  margin: 0;
+  width: 40em;
+  top: 40%;
+  left: 50%;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+}
+div.title-screen div.home-title .title{
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 6em;
   color: rgb(24, 113, 190);
 }
-div.home-title .title-2{
+div.title-screen div.home-title .title-2{
   font-family: 'Montserrat', sans-serif;
   font-size: 3em;
   text-align: left;
