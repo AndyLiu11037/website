@@ -101,6 +101,25 @@ div.interest .text{
   text-align: left;
 }
 
+div.about{
+  margin: auto;
+  width: 80em;
+  height: 80vh;
+}
+div.about .title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4em;
+  text-align: left;
+}
+
+div.about .text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  text-align: left;
+}
+div.about .text .text{
+  font-size: 1em;
+}
 div.portfolio{
   margin: auto;
   width: 40em;
@@ -119,9 +138,11 @@ div.portfolio .text{
 .background {
   min-height: 100vh;
   background-color: #212121;
+  background-image: linear-gradient(to bottom, #8ecae6 0%, #abc4ff 100%);
   color: azure;
   /*background-image: linear-gradient(to right, #a7bfe8, #6190e8);*/
 }
+/*Intro css*/
 .welcome, .welcome svg {
   position: fixed;
   width: 100%;
