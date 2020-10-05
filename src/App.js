@@ -12,9 +12,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './fonts.css';
 class App extends Component {
     //dont do intro if page refresh need to use session cookie
-    //make a dark mode slider
-    //change the colour of the text
-    //background in intro should be white and fades to gradient
     
 	constructor(props){
 		super(props);

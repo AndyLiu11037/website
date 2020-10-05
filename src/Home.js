@@ -1,11 +1,31 @@
 import React from 'react';
 import {hot} from "react-hot-loader";
 import 'animate.css';
-class Home extends React.Component {
+import Observer from '@researchgate/react-intersection-observer';
 
+class Home extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			interestVisibility: 'hidden',
+		}
+		this.handleChange = this.handleChange.bind(this);
+	}
+	handleChange(event){
+		console.log(event);
+		this.setState({
+			interestVisibility: event.isIntersecting ? 'visible' : 'invisible',
+		});
+	};
+	
 	render(){
+		const options = {
+			onChange: this.handleIntersection,
+			root: 'title-page',
+			rootMargin:''
+		}
 		return (
-				<div>{/*
+				<div className="title-page">{/*
 							When using svg line drawing animation, need to add strok="colour"*/}
 
 						
@@ -25,23 +45,31 @@ class Home extends React.Component {
 											Feel free to contact me about opportunities or to have a chat through <a className="text" href="https://www.linkedin.com/in/andy-liu-375aa117b/">LinkedIn</a> or my email:andyliu11037@gmail.com.
 											 </p>
 					</div>
-					<div className="website-name animate__animated animate__bounce">Andy Liu's Resume</div>
+					<Observer onChange={this.handleChange}>
 					<br></br>
-					<div className="interest">
-						<p className="title">Interests</p>
-						<ul className="text">
-							<li>Software Development</li>
-							<li>Cyber Security</li>
-							<li>Neural networks kinda</li>
-							<li>Psychology</li>
-						</ul>
-					</div>
-					<div className="portfolio">
-						<p className="title">Portfolio</p>
+					</Observer>
+					{
+						this.state.interestVisibility==='visible' 
+						? 						
+						<div className="interest animate__animated animate__fadeInLeft">
+								<p className="title">Interests</p>
+								<ul className="text">
+									<li>Software Development</li>
+									<li>Cyber Security</li>
+									<li>Neural networks kinda</li>
+									<li>Psychology</li>
+								</ul>
+						</div>
+						: 
+						null
+					}
 
-						<p className="text"> My Personal Projects</p>
-					</div>
-
+							<div className="portfolio">
+								<p className="title">Portfolio</p>
+								<p className="text"> My Personal Projects</p>
+							</div> 
+							
+					<div className="website-name animate__animated animate__fadeInLeft">Andy Liu's Resume</div>
 				</div>
 			
 		);
