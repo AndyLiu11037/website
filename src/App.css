@@ -36,12 +36,7 @@
   }
 }
 /*NavBar css*/
-.website-name{
-  color: blue;
-  font-family: 'Roboto', sans-serif;
-  font-size: large;
-  padding-right: 54em;
-}
+
 a.nav-item{
   font-family: 'Montserrat', sans-serif;;
   
@@ -67,7 +62,7 @@ div.title-screen {
 }
 div.title-screen div.home-title{
   margin: 0;
-  width: 40em;
+  width: 40vw;
   top: 40%;
   left: 50%;
   position: absolute;
@@ -78,70 +73,88 @@ div.title-screen div.home-title{
 div.title-screen div.home-title .title{
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  font-size: 6em;
+  font-size: 6vw;
   color: rgb(24, 113, 190);
 }
 div.title-screen div.home-title .title-2{
   font-family: 'Montserrat', sans-serif;
-  font-size: 3em;
+  font-size: 3vw;
   text-align: left;
 }
 .body{
   overflow: hidden;
   
 }
-div.interest{
-  position: relative;
+div.about-section{
   margin: auto;
-  width: 30em;
-  height: 20em;
-  left: -21%;
-}
-
-div.interest .title{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 4em;
-  text-align: left;
-}
-div.interest .text{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
-  text-align: left;
-}
-
-div.about{
-  margin: auto;
-  width: 80em;
+  width: 80vw;
   height: 60vh;
 }
-div.about .title{
+
+div.about-section .about{
+  margin: auto;
+  width: 70vw;
+  height: 60vh;
+}
+div.about-section .about .title{
   font-family: 'Montserrat', sans-serif;
-  font-size: 4em;
+  font-size: 4vw;
+  text-align: left;
+}
+div.about-section .about .text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3vw;
+  text-align: left;
+}
+div.about-section .about .text .text{
+  font-size: 1.3vw;
+}
+
+div.interest-section{
+  position: relative;
+  margin: auto;
+  width: 80vw;
+  height: 60vh;
+}
+div.interest-section .interest{
+  margin: auto;
+  width: 30vw;
+  height: auto;
+  position: absolute;
+  left: 6%;
+}
+div.interest-section .interest .title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4vw;
+  text-align: left;
+}
+div.interest-section .interest .text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5vw;
   text-align: left;
 }
 
-div.about .text{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5em;
-  text-align: left;
-}
-div.about .text .text{
-  font-size: 1em;
-}
-div.portfolio{
+div.portfolio-section{
   margin: auto;
-  width: 80em;
+  width: 80vw;
   height: 50vh;
   position: relative;
 }
-div.portfolio .title{
+div.portfolio-section .portfolio{
+  margin: auto;
+  width: 80vw;
+  height: auto;
+  position: absolute;
+  left: 6%;
+}
+div.portfolio-section .portfolio .title{
   font-family: 'Montserrat', sans-serif;
-  font-size: 4em;
+  font-size: 4vw;
   text-align: left;
 }
-div.portfolio .text{
+div.portfolio-section .portfolio .text{
   font-family: 'Montserrat', sans-serif;
-  font-size: 3em;
+  font-size: 2vw;
   text-align: left;
 }
 
