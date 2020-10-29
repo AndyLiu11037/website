@@ -1,5 +1,6 @@
 import React from 'react';
 import {hot} from "react-hot-loader";
+import {Link} from 'react-router-dom'
 import 'animate.css';
 import Observer from '@researchgate/react-intersection-observer';
 
@@ -101,7 +102,8 @@ class Home extends React.Component {
 						<div className="portfolio-section animate__animated animate__fadeInLeft">
 							<div className="portfolio">
 								<p className="title">Portfolio</p>
-								<p className="text"> My Personal Projects</p>
+								<p className="text"> <Link to="/portfolio">Past Projects</Link></p>
+								
 							</div> 
 						</div>
 						:
