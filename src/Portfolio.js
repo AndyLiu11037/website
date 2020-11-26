@@ -1,17 +1,33 @@
 import React from 'react';
 import {hot} from "react-hot-loader";
 import Project from './Components/Project.js';
-class Portfolio extends React.Component {
+import './Portfolio.css';
 
+import cardImage from './img/card.jpg';
+//import websiteImage from './img/website.jpg';
+import syncsImage from './img/sync hackathon.jpg';
+
+class Portfolio extends React.Component {
+	constructor(props){
+		super(props);
+	}
+	
 	render(){
 		return (
 				<div>
-					<h1>Projects</h1>
-					<Project website="https://github.com/AndyLiu11037/card-detector"></Project>
-					<Project website="https://github.com/AndyLiu11037/website"></Project>
-					<h1>Hackathons</h1>
-					<Project website="https://github.com/maggie-x/forecast_hackathon18"></Project>
-					<Project website="https://github.com/AndyLiu11037/SYNCS-hackathon"></Project>
+					{/* need to make a div which encompasses the title and project bodies, make it a transparent white*/}
+					<div className="project-hackathon-title">Projects</div>
+					<div className="projects-container">
+						<Project name="Playing card reader" website="https://github.com/AndyLiu11037/card-detector" img={cardImage} ></Project>
+						<Project name="This website" website="https://github.com/AndyLiu11037/website"></Project>
+					</div>
+
+					<div className="project-hackathon-title">Hackathons</div>
+					<div className="hackathon-container">
+						<Project name="UNSW CSE hackathon" website="https://github.com/maggie-x/forecast_hackathon18"></Project>
+						<Project name="SYNCS hackathon" website="https://github.com/AndyLiu11037/SYNCS-hackathon" img={syncsImage}></Project>
+					</div>
+
 				</div>
 			
 		);
