@@ -1,8 +1,16 @@
 import React from 'react';
 import {hot} from "react-hot-loader";
 import {Link} from 'react-router-dom'
-import 'animate.css';
 import Observer from '@researchgate/react-intersection-observer';
+import AliceCarousel from 'react-alice-carousel';
+
+import 'react-alice-carousel/lib/alice-carousel.css';
+import 'animate.css';
+
+import cardImage from './img/card.jpg';
+import websiteImage from './img/website.jpg';
+import CSEImage from './img/forecast.jpg';
+import syncsImage from './img/sync hackathon.jpg';
 
 class Home extends React.Component {
 	constructor(props){
@@ -16,6 +24,7 @@ class Home extends React.Component {
 		this.handleAbout = this.handleAbout.bind(this);
 		this.handlePortfolio = this.handlePortfolio.bind(this);
 	}
+	
 
 	handleAbout(event){
 		if (this.state.aboutVisibility==='invisible') {
@@ -44,6 +53,16 @@ class Home extends React.Component {
 	};
 
 	render(){
+		const handleDragStart = (e) => e.preventDefault();
+
+		const items = [
+			<img src={cardImage} onDragStart={handleDragStart} className="carousel-image" />,
+			<img src={websiteImage} onDragStart={handleDragStart} className="carousel-image" />,
+			<img src={CSEImage} onDragStart={handleDragStart} className="carousel-image" />,
+			<img src={syncsImage} onDragStart={handleDragStart} className="carousel-image" />,
+			{/*need to add in carousel item links and fix the css for it */}
+		];
+		
 		return (
 				<div className="title-page">{/*
 							When using svg line drawing animation, need to add strok="colour"*/}
@@ -102,6 +121,7 @@ class Home extends React.Component {
 						<div className="portfolio-section animate__animated animate__fadeInLeft">
 							<div className="portfolio">
 								<p className="title">Portfolio</p>
+								<AliceCarousel autoPlay autoPlayInterval={2000} mouseTracking items={items} />
 								<p className="text"> <Link to="/portfolio">Past Projects</Link></p>
 								
 							</div> 

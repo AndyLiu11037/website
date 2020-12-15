@@ -12,7 +12,6 @@ class Project extends Component{
                     <div className="card" >
                         <div style={{backgroundImage: 'url('+this.props.img+')'}} className="card-body">
                         </div>
-                            {/* make the background the img add a css for that*/}
                     </div>
 
                     <div className="project-text">       

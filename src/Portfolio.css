@@ -9,6 +9,8 @@
 .project .card .card-body{
     background-position-x: center;
     background-position-y: center;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 .project-text{
