@@ -16,7 +16,6 @@ class Portfolio extends React.Component {
 	render(){
 		return (
 				<div>
-					{/* need to make a div which encompasses the title and project bodies, make it a transparent white*/}
 					<div className="project-hackathon-title">Projects</div>
 					<div className="projects-container">
 						<Project name="Playing card reader" website="https://github.com/AndyLiu11037/card-detector" img={cardImage} ></Project>

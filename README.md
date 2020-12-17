@@ -6,7 +6,7 @@
 - [x] fix sizes and fonts to viewport height/width
 - [x] add project link to home page
 - [x] add projects to portfolio page
-- [ ] slideshow of projects on home page
+- [x] slideshow of projects on home page
 - [ ] change animation so it only happens once. Currently animation happens on page refresh of any page. Should only happen when first visiting website. 
 - [ ] have a link to updating resume
 - [ ] fix css so its universal on mobile and browser

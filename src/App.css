@@ -137,7 +137,7 @@ div.interest-section .interest .text{
 div.portfolio-section{
   margin: auto;
   width: 80vw;
-  height: 50vh;
+  height: 70vh;
   position: relative;
 }
 div.portfolio-section .portfolio{
@@ -159,22 +159,42 @@ div.portfolio-section .portfolio .text{
 }
 
 .carousel-image{
-    width: 30vw;
-    height: 32vh;
-
-    background-position-x: center;
-    background-position-y: center;
-    background-size:cover;
-    background-repeat: no-repeat;
+  border-style: solid;
+  border-color: white;
+  width: 30vw;
+  height: 32vh;
+  background-position-x: center;
+  background-position-y: center;
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
+.alice-carousel__stage-item{
+  left: 30%;
+}
+
+.subtitle-black{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2vw;
+  text-align: left;
+  top:80%;
+  color: black;
+  position: relative;
+}
+.subtitle-white{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2vw;
+  text-align: left;
+  top:80%;
+  position: relative;
+  color: white;
+}
 /*Background css*/
 .background {
   min-height: 100vh;
   background-color: #212121;
   background-image: linear-gradient(to bottom, #8ecae6 0%, #abc4ff 100%);
   color: azure;
-  /*background-image: linear-gradient(to right, #a7bfe8, #6190e8);*/
 }
 /*Intro css*/
 .welcome, .welcome svg {

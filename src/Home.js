@@ -44,7 +44,7 @@ class Home extends React.Component {
 	
 	handlePortfolio(event){
 		//console.log(event);
-		console.log(this.state.portfolioVisibility);
+		//console.log(this.state.portfolioVisibility);
 		if (this.state.portfolioVisibility==='invisible') {
 			this.setState({
 				portfolioVisibility: event.isIntersecting ? 'visible' : 'invisible',
@@ -56,11 +56,26 @@ class Home extends React.Component {
 		const handleDragStart = (e) => e.preventDefault();
 
 		const items = [
-			<img src={cardImage} onDragStart={handleDragStart} className="carousel-image" />,
-			<img src={websiteImage} onDragStart={handleDragStart} className="carousel-image" />,
-			<img src={CSEImage} onDragStart={handleDragStart} className="carousel-image" />,
-			<img src={syncsImage} onDragStart={handleDragStart} className="carousel-image" />,
-			{/*need to add in carousel item links and fix the css for it */}
+			<a href="https://github.com/AndyLiu11037/card-detector">
+				<div style={{backgroundImage: 'url('+cardImage+')'}} onDragStart={handleDragStart} className="carousel-image"> 
+					<div className="subtitle-white"> Playing card reader</div> 
+				</div>
+			</a>,
+			<a href="https://github.com/AndyLiu11037/website">
+				<div style={{backgroundImage: 'url('+websiteImage+')'}} onDragStart={handleDragStart} className="carousel-image"> 
+					<div className="subtitle-white"> This website</div> 
+				</div>
+			</a>,
+			<a href="https://github.com/maggie-x/forecast_hackathon18">
+				<div style={{backgroundImage: 'url('+CSEImage+')'}} onDragStart={handleDragStart} className="carousel-image"> 
+					<div className="subtitle-black"> UNSW CSE hackathon</div> 
+				</div>
+			</a>,
+			<a href="https://github.com/AndyLiu11037/SYNCS-hackathon">
+				<div style={{backgroundImage: 'url('+syncsImage+')'}} onDragStart={handleDragStart} className="carousel-image"> 
+					<div className="subtitle-black"> SYNCS hackathon</div> 
+				</div>
+			</a>,
 		];
 		
 		return (
@@ -121,9 +136,7 @@ class Home extends React.Component {
 						<div className="portfolio-section animate__animated animate__fadeInLeft">
 							<div className="portfolio">
 								<p className="title">Portfolio</p>
-								<AliceCarousel autoPlay autoPlayInterval={2000} mouseTracking items={items} />
-								<p className="text"> <Link to="/portfolio">Past Projects</Link></p>
-								
+								<AliceCarousel infinite autoPlay autoPlayInterval={2000} mouseTracking items={items} />
 							</div> 
 						</div>
 						:
