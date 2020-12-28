@@ -2,10 +2,11 @@ import React from 'react';
 import {hot} from "react-hot-loader";
 import {Link} from 'react-router-dom'
 import Observer from '@researchgate/react-intersection-observer';
-import AliceCarousel from 'react-alice-carousel';
+import Slider from "react-slick";
 
-import 'react-alice-carousel/lib/alice-carousel.css';
 import 'animate.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import cardImage from './img/card.jpg';
 import websiteImage from './img/website.jpg';
@@ -25,7 +26,6 @@ class Home extends React.Component {
 		this.handlePortfolio = this.handlePortfolio.bind(this);
 	}
 	
-
 	handleAbout(event){
 		if (this.state.aboutVisibility==='invisible') {
 			this.setState({
@@ -53,31 +53,13 @@ class Home extends React.Component {
 	};
 
 	render(){
-		const handleDragStart = (e) => e.preventDefault();
-
-		const items = [
-			<a href="https://github.com/AndyLiu11037/card-detector">
-				<div style={{backgroundImage: 'url('+cardImage+')'}} onDragStart={handleDragStart} className="carousel-image"> 
-					<div className="subtitle-white"> Playing card reader</div> 
-				</div>
-			</a>,
-			<a href="https://github.com/AndyLiu11037/website">
-				<div style={{backgroundImage: 'url('+websiteImage+')'}} onDragStart={handleDragStart} className="carousel-image"> 
-					<div className="subtitle-white"> This website</div> 
-				</div>
-			</a>,
-			<a href="https://github.com/maggie-x/forecast_hackathon18">
-				<div style={{backgroundImage: 'url('+CSEImage+')'}} onDragStart={handleDragStart} className="carousel-image"> 
-					<div className="subtitle-black"> UNSW CSE hackathon</div> 
-				</div>
-			</a>,
-			<a href="https://github.com/AndyLiu11037/SYNCS-hackathon">
-				<div style={{backgroundImage: 'url('+syncsImage+')'}} onDragStart={handleDragStart} className="carousel-image"> 
-					<div className="subtitle-black"> SYNCS hackathon</div> 
-				</div>
-			</a>,
-		];
-		
+		var settings = {
+			infinite: true,
+			speed: 3000,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			variableWidth: true,
+		  };
 		return (
 				<div className="title-page">{/*
 							When using svg line drawing animation, need to add strok="colour"*/}
@@ -99,8 +81,10 @@ class Home extends React.Component {
 								<p className="text">I'm a recent graduate from the University of New South Wales studying Computer Science. I have quite a few interests 
 													that I pursue in my spare time relating to tech and other things. I'm always learning new things from doing my own projects, 
 													whether it be a pure programming project, Arduino projects or even just following tutorials to further my understanding in new areas.
-													Feel free to contact me about opportunities or to have a chat through <a className="text" href="https://www.linkedin.com/in/andy-liu-375aa117b/">LinkedIn</a> or my email:andyliu11037@gmail.com.
+													Feel free to contact me about opportunities or to have a chat through <a className="text" href="https://www.linkedin.com/in/andy-liu11/">LinkedIn</a> or my email:andyliu11037@gmail.com.
 								</p>
+								<p className="title">Resume </p>
+								<p className="text"> <a className="text" href="https://drive.google.com/file/d/18xCRtnHuE25InRR9QBwVi8OBrGuO96FR/view?usp=sharing">Resume Link</a> </p>
 							</div>
 						</div>
 
@@ -119,7 +103,7 @@ class Home extends React.Component {
 									<ul className="text">
 										<li>Software Development</li>
 										<li>Cyber Security</li>
-										<li>Neural networks kinda</li>
+										<li>Artificial Intelligence</li>
 										<li>Psychology</li>
 									</ul>
 							</div>
@@ -136,7 +120,28 @@ class Home extends React.Component {
 						<div className="portfolio-section animate__animated animate__fadeInLeft">
 							<div className="portfolio">
 								<p className="title">Portfolio</p>
-								<AliceCarousel infinite autoPlay autoPlayInterval={2000} mouseTracking items={items} />
+								<Slider {...settings}>
+										<div style={{ width: 800 }} className="carousel-image card">
+											<a href="https://github.com/AndyLiu11037/card-detector">
+											<p className="subtitle-black"> Playing card reader</p> 
+											</a>
+										</div>
+										<div style={{ width: 800 }} className="carousel-image website">
+											<a href="https://github.com/AndyLiu11037/website">
+											<p className="subtitle-white"> This website</p> 
+											</a>
+										</div>
+										<div style={{ width: 800 }} className="carousel-image cse">
+											<a href="https://github.com/maggie-x/forecast_hackathon18">
+											<p className="subtitle-black"> UNSW CSE hackathon</p> 
+											</a>
+										</div>
+										<div style={{ width: 800 }} className="carousel-image syncs">
+											<a href="https://github.com/AndyLiu11037/SYNCS-hackathon">
+											<p className="subtitle-black"> SYNCS hackathon</p> 
+											</a>
+										</div>
+								</Slider>
 							</div> 
 						</div>
 						:

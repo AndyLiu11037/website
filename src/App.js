@@ -11,7 +11,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './fonts.css';
 class App extends Component {
-    //dont do intro if page refresh need to use session cookie
     
 	constructor(props){
 		super(props);
@@ -19,9 +18,20 @@ class App extends Component {
 			renderIntro: true,
 		};
         this.unmountIntro = this.unmountIntro.bind(this);
-	}
-	componentWillUnmount() {
-		clearInterval(this.interval);
+    }
+    
+    componentDidMount(){
+        if(window.sessionStorage.getItem("newLoad")===null){
+            this.setState({
+                renderIntro: true,
+            });
+            window.sessionStorage.setItem("newLoad","done");
+        }
+        else{
+            this.setState({
+                renderIntro:false,
+            });
+        }
     }
     unmountIntro(){
         this.setState({renderIntro: false});

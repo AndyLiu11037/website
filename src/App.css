@@ -159,18 +159,26 @@ div.portfolio-section .portfolio .text{
 }
 
 .carousel-image{
-  border-style: solid;
-  border-color: white;
-  width: 30vw;
-  height: 32vh;
+  height: 45vh;
   background-position-x: center;
   background-position-y: center;
   background-size:cover;
   background-repeat: no-repeat;
 }
+.card{
+  background-image: url("./img/card.jpg");
+}
 
-.alice-carousel__stage-item{
-  left: 30%;
+.website{
+  background-image: url("./img/website.jpg");
+}
+
+.cse{
+  background-image: url("./img/forecast.jpg");
+}
+
+.syncs{
+  background-image: url("./img/sync hackathon.jpg");
 }
 
 .subtitle-black{
